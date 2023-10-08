@@ -4,32 +4,70 @@
 }
 
 body {
-    /*background-color: black;*/
-    text-align: center;
-    font-family: "Calibri Light";
+  background-color: black;
+  text-align: center;
+  font-family: "Calibri Light";
+  color: white;
 }
 
 header {
-    height: 70px;
-    background: red;
+  height: 70px;
+  align-items: center;
+  padding: 1rem;
 }
 
 main {
-    display: flex;
-    height: calc(100vh - 120px);
+  display: flex;
+  height: calc(100vh - 120px);
 }
 
 model-viewer {
-    width: 60%;
-    min-height: 100%;
+  width: 60%;
+  min-height: 100%;
 }
 
 aside {
-    background: blue;
-    width: 40%;
+  background: black;
+  width: 40%;
 }
 
 footer {
-    height: 50px;
-    background: green;
+  height: 60px;
+  padding: 1rem;
+  background: black;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.sismometer-one {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.s1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#sismometer {
+  width: 30%;
+  height: 30px;
+  padding: 1px;
+  align-items: center;
+  background-color: rgba(100, 102, 97, 0.449);
+  margin-left: 20px;
+  border-radius: 10rem;
+}
+
+#latitude {
+  width: 50%;
+  height: 50px;
+  padding: 1px;
+  border-radius: 10rem;
+  margin-left: 5rem;
 }
