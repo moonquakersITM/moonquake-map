@@ -58,4 +58,3 @@ jspm_packages/
 # JetBrains Ide
 .idea/
 .svelte-kit/
-assets/
