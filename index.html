@@ -6,11 +6,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/model-viewer.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-    <script type="text/javascript">
-        const mostrarInformacion = (msg) => {
-            console.log(msg);
-        }
-    </script>
 </head>
 <body>
     <header id="header" class="">
@@ -19,31 +14,46 @@
 
     <main>
         <model-viewer
+            id="modelo3D"
             src="assets/models/moon.glb"
             environment-image="assets/img/white-bg.jpg"
             shadow-intensity="0"
-            scale="0.1 0.1 0.1"
-            auto-rotate
             camera-controls
-            hotspots-visible="true"
             >
-            <hotspot-preset
-                id="hotspot1"
-                rotation="0 0 0"
-                position="-7 5 5"
-                visibility-attribute="visible"
-                tooltip="Haz clic para más información"
-                onclick="mostrarInformacion('hotspot1')">
-            </hotspot-preset>
 
-            <button class="hotspot" slot="hotspot-hand" data-position="-7 5 5" data-normal="-0.73 0.05 0.69">
-                <div class="annotation">This hotspot disappears completely</div>
+            <button class="hotspot" slot="hotspot-1" data-position="-7.247334562392951m 4.77699887668415m 4.370802548972585m" data-normal="-0.8916996605219055m 0.43002954124969345m 0.14123140259055988m" data-visibility-attribute="visible">
+                <img src="assets/img/signal.png" alt="">
+                <div class="HotspotAnnotation">S15</div>
             </button>
 
-            <button class="hotspot" slot="hotspot-1" data-position="-6.8904823413156455m 4.718995326219477m 4.680029535439207m" data-normal="0.05018711339959765m 0.283655908225435m 0.9576119148054809m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation">Prueba</div>
+            <button class="hotspot" slot="hotspot-2" data-position="-7.293642988562724m 4.589574932185796m 4.263160470171713m" data-normal="-0.9982882684144007m -0.026140346716566547m -0.05231840421606108m" data-visibility-attribute="visible">
+                <img src="assets/img/signal.png" alt="">
+                <div class="HotspotAnnotation">S14</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-4" data-position="-7.287727553924598m 4.592783154186592m 4.224195217803156m" data-normal="-0.9873509101663676m -0.02614201050985844m -0.15638022726722225m" data-visibility-attribute="visible">
+                <img src="assets/img/signal.png" alt="">
+                <div class="HotspotAnnotation">S12</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-5" data-position="-7.212335065864957m 4.6194735787591785m 4.544786455214385m" data-normal="-0.7768800372285473m 0.026141546996306733m 0.62910573616556m" data-visibility-attribute="visible">
+                <img src="assets/img/signal.png" alt="">
+                <div class="HotspotAnnotation">S11</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-6" data-position="-7.229485790754434m 4.578437504244457m 4.520520330632413m" data-normal="-0.8360923311179921m -0.07835327421639178m 0.542964435543667m" data-visibility-attribute="visible">
+                <img src="assets/img/signal.png" alt="">
+                <div class="HotspotAnnotation">S16</div>
+            </button>
+
+            <button class="Hotspot" slot="hotspot-3" data-position="-7.278376694555638m 4.645036426179677m 4.408495387855343m" data-normal="-0.9576848424246293m 0.13034923885740093m 0.25661024632584195m" data-visibility-attribute="visible">
+                <section class="btn-pulse">
+                    <span class="ring"></span>
+                    <span class="circle"></span>
+                </section>
             </button>
         </model-viewer>
+
 
         <aside>
             <h4>Terremoto 1</h4>
@@ -54,4 +64,5 @@
         <p>Create by Moonquakers team from ITM</p>
     </footer>
 </body>
+<script type="text/javascript" src="js/index.js"></script>
 </html>
