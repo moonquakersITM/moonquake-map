@@ -23,16 +23,16 @@ main {
 
 model-viewer {
   width: 60%;
-  min-height: 100%;
+  height: 100%;
 }
 
 aside {
   background: black;
   width: 40%;
+  padding: 50px;
 }
 
 footer {
-  height: 60px;
   padding: 1rem;
   background: black;
 }
@@ -46,7 +46,7 @@ footer {
 .sismometer-one {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .s1 {
