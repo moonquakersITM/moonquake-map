@@ -5,13 +5,52 @@
     <title>Moonquake Map 2.0</title>
     <link rel="stylesheet" href="css/index.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <script type="text/javascript">
+        const mostrarInformacion = (msg) => {
+            console.log(msg);
+        }
+    </script>
 </head>
 <body>
-    <model-viewer
-            src="models/moon.glb"
-            environment-image="models/white-bg.jpg"
+    <header id="header" class="">
+        <h3>Moonquake Map</h3>
+    </header>
+
+    <main>
+        <model-viewer
+            src="assets/models/moon.glb"
+            environment-image="assets/img/white-bg.jpg"
             shadow-intensity="0"
-            camera-controls>
-    </model-viewer>
+            scale="0.1 0.1 0.1"
+            auto-rotate
+            camera-controls
+            hotspots-visible="true"
+            >
+            <hotspot-preset
+                id="hotspot1"
+                rotation="0 0 0"
+                position="-7 5 5"
+                visibility-attribute="visible"
+                tooltip="Haz clic para más información"
+                onclick="mostrarInformacion('hotspot1')">
+            </hotspot-preset>
+
+            <button class="hotspot" slot="hotspot-hand" data-position="-7 5 5" data-normal="-0.73 0.05 0.69">
+                <div class="annotation">This hotspot disappears completely</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-1" data-position="-6.8904823413156455m 4.718995326219477m 4.680029535439207m" data-normal="0.05018711339959765m 0.283655908225435m 0.9576119148054809m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">Prueba</div>
+            </button>
+        </model-viewer>
+
+        <aside>
+            <h4>Terremoto 1</h4>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Create by Moonquakers team from ITM</p>
+    </footer>
 </body>
 </html>
